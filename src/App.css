@@ -1,0 +1,17 @@
+ .container__card{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 23px;
+  max-width: 1240px;
+  justify-content: center;
+ }
+ .product__image{
+  object-fit: fill;
+ }
+ h1{
+  text-align: center;
+  font-size: 40px;
+ }
+ img{
+  max-width: 100% !important;
+ }
