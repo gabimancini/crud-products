@@ -241,31 +241,11 @@
       }
     },
     {
-      "id": "9f8e",
-      "title": "frfr",
-      "description": "rgrtg"
-    },
-    {
-      "id": "d10d",
-      "title": "frfr",
-      "description": "rgrtg"
-    },
-    {
-      "id": "75f9",
-      "title": "frfr",
-      "description": "rgrtg"
-    },
-    {
-      "id": "a47e",
-      "title": "bgbg",
-      "description": "gbg"
-    },
-    {
-      "id": "f46b",
-      "title": "tt",
-      "description": "rt",
-      "price": 0,
-      "image": ""
+      "id": "4ff0",
+      "title": "Remera",
+      "description": "color roja",
+      "price": 45,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_QEo4n0rlOZr01mdjaK6WHo3XhU31sFACa2s320aHkg&s"
     }
   ]
 }
