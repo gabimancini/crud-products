@@ -12,7 +12,7 @@ interface Products {
 
 export default function ProductCard(props: Products) {
     return (
-        <Card sx={{ maxWidth: 250 }}>
+        <Card sx={{ maxWidth: 250 }} className=''>
             <CardActionArea>
                 <CardMedia
                     component="img"
