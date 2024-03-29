@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useGetProductsQuery } from "../api/apiSlice";
+import { useGetProductsQuery } from "../../api/apiSlice";
 import ProductCard from "./Product";
 function ProductList() {
   const { data: products, isError, isLoading } = useGetProductsQuery("20")
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading) return <div>Cargando tus productos... </div>
   else if (isError) return <div>Problemas al cargar</div>
   return (
     <>
