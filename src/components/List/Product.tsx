@@ -1,8 +1,7 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { CardActionArea, CardActions, CardMedia } from '@mui/material';
 interface Products {
     id: string
     title: string
@@ -11,30 +10,34 @@ interface Products {
     image: string
 }
 
-export default function ProductCard(props:Products ) {
+export default function ProductCard(props: Products) {
     return (
-        <Card sx={{ maxWidth: 250 }} id={props.id}>
+        <Card sx={{ maxWidth: 250 }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
-                    height="350"
+                    height="250"
                     image={props.image}
                     alt="green iguana"
                     className="product__image"
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom  component="div">
                         {props.title}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                         {props.description}
+                    <Typography gutterBottom component="div">
+                        {props.description}
                     </Typography>
+                    <Typography gutterBottom component="div">
+                        {`$ ${props.price}`}
+                    </Typography>
+
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                <Button size="small" color="primary">
+                {/* <Button size="small" color="primary">
                     {props.price}
-                </Button>
+                </Button>*/}
             </CardActions>
         </Card>
     );

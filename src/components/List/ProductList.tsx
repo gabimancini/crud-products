@@ -1,24 +1,26 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useGetProductsQuery } from "../../api/apiSlice";
+import { useGetProductsQuery} from "../../api/apiSlice";
 import ProductCard from "./Product";
 function ProductList() {
-  const { data: products, isError, isLoading } = useGetProductsQuery("20")
+  const { data: products, isError, isLoading } = useGetProductsQuery()
+ 
   if (isLoading) return <div>Cargando tus productos... </div>
-  else if (isError) return <div>Problemas al cargar</div>
+  else if (isError) return <div>Problemas al cargar</div> 
   return (
     <>
      <h1>Products List</h1> 
       <div className="container__card">
         {products?.map((product: any) => {
           return (
-
             <ProductCard
+            key={product.id}
               id={product.id}
               title={product.title}
-              image={product.image}
-              description={product.description}
-              price={product.price}
+             image={product.image}
+             description={product.description} 
+             price={product.price}
             />
+ 
           )
         })}
       </div>
