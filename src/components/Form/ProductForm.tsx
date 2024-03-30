@@ -3,6 +3,7 @@ import { Formik, FormikHelpers, FormikProps, Form, Field } from "formik";
 import { FieldForm } from "./FieldForm";
 import * as yup from "yup";
 import { useAddProductMutation } from "../../api/apiSlice";
+ 
 interface FormValues {
   title: string;
   description: string;
@@ -19,16 +20,13 @@ export default function App() {
   const [addProduct] = useAddProductMutation()
   return (
     <>
-      <Container maxWidth="md">
+      <Container  >
         <Box mb={3} p={2}>
           <Typography
             align="center"
             variant="h5"
             style={{ lineHeight: 1.25, marginBottom: 16 }}
           >
-            Our Products
-          </Typography>
-          <Typography align="center">
             Add your own products
           </Typography>
         </Box>
@@ -37,7 +35,7 @@ export default function App() {
             title: "",
             description: "",
             price: 0,
-            image:"",
+            image:""
           }}
           validationSchema={validationSchema}
           onSubmit={(
@@ -53,7 +51,7 @@ export default function App() {
           {(formikProps: FormikProps<FormValues>) => (
             <Form noValidate autoComplete="off">
               <Grid container spacing={2}>
-                <Grid item xs={12}>
+                <Grid item  >
                   <Field
                     name="title"
                     label="Title"
@@ -61,7 +59,7 @@ export default function App() {
                     component={FieldForm}
                   />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item  >
                   <Field
                     name="description"
                     label="Description"
@@ -69,7 +67,7 @@ export default function App() {
                     component={FieldForm}
                   />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item  >
                   <Field
                     type="number"
                     name="price"
@@ -78,7 +76,7 @@ export default function App() {
                     component={FieldForm}
                   />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item  >
                   <Field 
                     name="image"
                     label="Pegar URL de imagen"
@@ -86,7 +84,7 @@ export default function App() {
                     component={FieldForm}
                   />
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item  >
                   <Button
                     type="submit"
                     variant="outlined"
