@@ -79,7 +79,7 @@ export default function App() {
                 <Grid item  >
                   <Field
                     name="image"
-                    label="Pegar URL de imagen"
+                    label="Enter image URL "
                     size="small"
                     component={FieldForm}
                   />
@@ -92,7 +92,7 @@ export default function App() {
                     color="primary"
                     disabled={formikProps.isSubmitting}
                   >
-                    Submit
+                    Add Product
                   </Button>
                 </Grid>
               </Grid>

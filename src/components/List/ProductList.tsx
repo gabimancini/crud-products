@@ -7,8 +7,8 @@ import { CustomizedContainer, ContainerCard } from "./styledProduct";
 function ProductList() {
   const { data: products, isError, isLoading } = useGetProductsQuery()
 
-  if (isLoading) return <div>Cargando tus productos... </div>
-  else if (isError) return <div>Problemas al cargar</div>
+  if (isLoading) return <CustomizedContainer>Cargando tus productos... </CustomizedContainer>
+  else if (isError) return <CustomizedContainer>Problemas al cargar</CustomizedContainer>
 
   return (
     <CustomizedContainer>
