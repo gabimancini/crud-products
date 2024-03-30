@@ -1,32 +1,33 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useGetProductsQuery} from "../../api/apiSlice";
+import { useGetProductsQuery } from "../../api/apiSlice";
 import ProductCard from "./Product";
-import  {ContainerCard} from './styledProduct'
+import Typography from '@mui/material/Typography';
+import { CustomizedContainer, ContainerCard } from "./styledProduct";
+
 function ProductList() {
   const { data: products, isError, isLoading } = useGetProductsQuery()
- 
+
   if (isLoading) return <div>Cargando tus productos... </div>
-  else if (isError) return <div>Problemas al cargar</div> 
+  else if (isError) return <div>Problemas al cargar</div>
+
   return (
-    <div>
-     <h1>Products List</h1> 
+    <CustomizedContainer>
+      <Typography gutterBottom pt={4} mt={10} mb={6} variant="h3" component="div">Products List</Typography>
       <ContainerCard>
         {products?.map((product: any) => {
           return (
             <ProductCard
-            key={product.id}
+              key={product.id}
               id={product.id}
               title={product.title}
-             image={product.image}
-             description={product.description} 
-             price={product.price}
+              image={product.image}
+              description={product.description}
+              price={product.price}
             />
- 
           )
         })}
       </ContainerCard>
-    </div>
+    </CustomizedContainer>
   )
-
 }
 export default ProductList;

@@ -1,12 +1,11 @@
 import ProductList from "./components/List/ProductList"
-import ProductForm  from "./components/Form/ProductForm"
-import  {Main} from './styledApp'
+import ProductForm  from "./components/Form/ProductForm" 
 function App() {
   return (
-    <Main>
+    <>
       <ProductForm />
       <ProductList />
-    </Main>
+    </>
   )
 }
 

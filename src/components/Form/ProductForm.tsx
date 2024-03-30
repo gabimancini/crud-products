@@ -1,9 +1,9 @@
 import { Container, Typography, Grid, Button, Box } from "@mui/material";
 import { Formik, FormikHelpers, FormikProps, Form, Field } from "formik";
-import { FieldForm } from "./FieldForm";
 import * as yup from "yup";
+import { FieldForm } from "./FieldForm";
 import { useAddProductMutation } from "../../api/apiSlice";
- 
+
 interface FormValues {
   title: string;
   description: string;
@@ -35,7 +35,7 @@ export default function App() {
             title: "",
             description: "",
             price: 0,
-            image:""
+            image: ""
           }}
           validationSchema={validationSchema}
           onSubmit={(
@@ -77,7 +77,7 @@ export default function App() {
                   />
                 </Grid>
                 <Grid item  >
-                  <Field 
+                  <Field
                     name="image"
                     label="Pegar URL de imagen"
                     size="small"

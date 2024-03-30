@@ -1,7 +1,12 @@
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography';
-import { CardActionArea, CardActions, CardMedia } from '@mui/material';
+import {
+    CustomizedCard,
+    CustomizedCardMedia,
+    CustomizedDescription,
+    CustomizedPrice
+} from './styledProduct';
+
 interface Products {
     id: string
     title: string
@@ -12,33 +17,24 @@ interface Products {
 
 export default function ProductCard(props: Products) {
     return (
-        <Card sx={{ maxWidth: 250 }} className=''>
-            <CardActionArea>
-                <CardMedia
-                    component="img"
-                    height="250"
-                    image={props.image}
-                    alt="green iguana"
-                    className="product__image"
-                />
-                <CardContent>
-                    <Typography gutterBottom  component="div">
-                        {props.title}
-                    </Typography>
-                    <Typography gutterBottom component="div">
-                        {props.description}
-                    </Typography>
-                    <Typography gutterBottom component="div">
-                        {`$ ${props.price}`}
-                    </Typography>
-
-                </CardContent>
-            </CardActionArea>
-            <CardActions>
-                {/* <Button size="small" color="primary">
-                    {props.price}
-                </Button>*/}
-            </CardActions>
-        </Card>
+        <CustomizedCard sx={{ maxWidth: 250, paddingTop: 5 }}>
+            <CustomizedCardMedia
+                component="img"
+                height="250"
+                image={props.image}
+                alt="green iguana"
+            />
+            <CardContent>
+                <Typography gutterBottom variant="h6" component="div">
+                    {props.title}
+                </Typography>
+                <CustomizedPrice gutterBottom component="div">
+                    <span>US$</span> {props.price}
+                </CustomizedPrice>
+                <CustomizedDescription variant="body2" color="text.secondary" component="div">
+                    {props.description}
+                </CustomizedDescription>
+            </CardContent>
+        </CustomizedCard>
     );
 }
