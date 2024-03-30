@@ -1,3 +1,14 @@
+# CRUD 
+## Este proyecto es parte de un challenge donde se solicita que construya en App que cumpla con los siguientes requisitos:
+- Tecnologías: React, Redux Toolkit Query, Formik, Material UI, styled-component.
+- Los usuarios pueden ver todos los productos con sus características.
+- Los usuarios pueden agregar productos a través de un formulario.
+
+Una vez clonado el repositorio, correr el comando nmp install para instalar todas las dependencias.
+
+## API Rest
+Para probar las peticiones de datos se utiliza json-server.El archivo data.json contiene los datos que debe exponer la API REST. Los puntos CRUD se crean en el archvio apiSlice.
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
