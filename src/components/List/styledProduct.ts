@@ -5,6 +5,7 @@ import { Container, Card, CardMedia, Typography} from "@mui/material";
 export const ContainerCard = styled.div`
 display: flex; 
 flex-wrap:wrap;
+justify-content: center;
 gap:20px;
 `;
 
@@ -22,6 +23,10 @@ border-radius:8px;
 export const CustomizedCardMedia = styled(CardMedia )`
 && {
 object-fit: contain;
+transition: all .5s;
+}
+&:hover{
+    transform: scale(1.2)
 }
 ` as any;
 
