@@ -246,6 +246,14 @@
       "description": "color roja",
       "price": 45,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_QEo4n0rlOZr01mdjaK6WHo3XhU31sFACa2s320aHkg&s"
+    },
+    {
+      "id": "4501",
+      "title": "Prueba",
+      "description": "Prueba",
+      "price": 34,
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tradicional13.com%2Fremera-tradicional.html&psig=AOvVaw3eYTzfXLAL2RgiDJTDGg2s&ust=1712172809341000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLiky_KipIUDFQAAAAAdAAAAABAE",
+      "category": "remera"
     }
   ]
 }

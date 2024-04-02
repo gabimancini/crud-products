@@ -8,7 +8,8 @@ interface FormValues {
   title: string;
   description: string;
   price: number;
-  image: string
+  image: string;
+  category: string;
 }
 
 const validationSchema = yup.object().shape({
@@ -35,7 +36,8 @@ export default function App() {
             title: "",
             description: "",
             price: 0,
-            image: ""
+            image: "",
+            category: ""
           }}
           validationSchema={validationSchema}
           onSubmit={(
@@ -63,6 +65,14 @@ export default function App() {
                   <Field
                     name="description"
                     label="Description"
+                    size="small"
+                    component={FieldForm}
+                  />
+                </Grid>
+                <Grid item  >
+                  <Field 
+                    name="category"
+                    label="Category"
                     size="small"
                     component={FieldForm}
                   />
